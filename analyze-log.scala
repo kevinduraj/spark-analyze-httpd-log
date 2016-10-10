@@ -36,15 +36,25 @@ sql(query2).show(7, false)
 val query2 = """SELECT ref, COUNT(*) AS total FROM log_table GROUP BY ref ORDER BY total DESC LIMIT 12"""
 sql(query2).show(12, false)
 
+logDF.printSchema()
+val query3 = """SELECT host, COUNT(*) AS total FROM log_table 
+                    WHERE host LIKE '%bot%'    OR 
+                          host LIKE '%crawl%'  OR 
+                          host LIKE '%spider%' 
+                    GROUP BY host 
+                    ORDER BY total DESC LIMIT 12"""
+sql(query3).show(12, false)
+
 /*-------------------------------------------------------------------------------------------------------------------
     Analyze Bot visits
  -------------------------------------------------------------------------------------------------------------------*/
+//val bots => Set("bot", "spider")
+//val botDF = lines.map(_.split("\\|")).filter(_(3).contains("bot")).map( r => HttpLog(r(0), validateSize(r(1)), r(2), r(3), r(4), r(5) ) ).toDF()
+// (x => x.matches("[A-Za-z]+")
+//botDF.registerTempTable("bot_table")
 
-val botDF = lines.map(_.split("\\|")).filter(_(3).contains("bot")).map( r => HttpLog(r(0), validateSize(r(1)), r(2), r(3), r(4), r(5) ) ).toDF()
-botDF.registerTempTable("bot_table")
-
-val query3 = """SELECT host, COUNT(*) AS total FROM bot_table GROUP BY host ORDER BY total DESC LIMIT 12"""
-sql(query3).show(12,false)
+//val query3 = """SELECT host, COUNT(*) AS total FROM bot_table GROUP BY host ORDER BY total DESC LIMIT 12"""
+//sql(query3).show(12,false)
 
 println("echo > " + file)
 
