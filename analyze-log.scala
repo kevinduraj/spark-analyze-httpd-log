@@ -27,10 +27,10 @@ logDF.printSchema()
 
 logDF.registerTempTable("log_table")
 
-val query1 = """SELECT ip, COUNT(*) AS total FROM log_table GROUP BY ip ORDER BY total DESC LIMIT 7"""
+val query1 = """SELECT ip, COUNT(*) AS total FROM log_table GROUP BY ip ORDER BY total DESC LIMIT 12"""
 sql(query1).show()
 
-val query2 = """SELECT ip, SUM(size) AS bigsize FROM log_table GROUP BY ip ORDER BY bigsize DESC LIMIT 7"""
+val query2 = """SELECT ip, SUM(size) AS bigsize FROM log_table GROUP BY ip ORDER BY bigsize DESC LIMIT 12"""
 sql(query2).show(7, false)
 
 val query2 = """SELECT ref, COUNT(*) AS total FROM log_table GROUP BY ref ORDER BY total DESC LIMIT 12"""
