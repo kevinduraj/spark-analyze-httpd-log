@@ -11,11 +11,8 @@ Analyze Custom HTTP Log
 200|19812|85.17.175.239|dc001.ams01.traiddns.net|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
 200|19812|75.126.50.206|ce.32.7e4b.ip4.static.sl-reverse.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
 200|19812|85.13.145.154|dd26632.kasserver.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
-200|19812|75.126.50.200|dweb06.dal.fe.vscopehost.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
 200|19812|108.168.211.92|5c.d3.a86c.ip4.static.sl-reverse.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
 200|19812|64.237.33.131|www.aoaforums.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
-200|19812|75.126.50.200|dweb06.dal.fe.vscopehost.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
-200|19812|75.126.50.203|cb.32.7e4b.ip4.static.sl-reverse.com|GET / HTTP/1.0|myhealthcare.com|http://myhealthcare.com/
 200|18859|75.126.50.197|c5.32.7e4b.ip4.static.sl-reverse.com|GET / HTTP/1.0|find1friend.com|http://find1friend.com/
 200|18859|69.65.43.214|server2.extremedns.com|GET / HTTP/1.0|find1friend.com|http://find1friend.com/
 ```
